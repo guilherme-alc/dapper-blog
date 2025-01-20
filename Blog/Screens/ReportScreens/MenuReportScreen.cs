@@ -41,10 +41,13 @@ namespace Blog.Screens.ReportScreens
                     TagCountPostScreen.Load();
                     break;
                 case 4:
+                    PostFromCategoryScreen.Load();
                     break;
                 case 5:
+                    PostWithCategory.Load();
                     break;
                 case 6:
+                    PostWithTagScreen.Load();
                     break;
                 default:
                     Load();
