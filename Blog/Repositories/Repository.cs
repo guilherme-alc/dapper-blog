@@ -12,8 +12,7 @@ namespace Blog.Repositories
         }
         public IEnumerable<T> GetAll()
         {
-            using var connection = _connection;
-            var items = connection.GetAll<T>();
+            var items = _connection.GetAll<T>();
 
             if (items == null)
                 throw new Exception("Erro ao buscar todos os registros");
@@ -27,8 +26,7 @@ namespace Blog.Repositories
                 throw new ArgumentException("O ID deve ser maior que zero.");
             }
 
-            using var connection = _connection;
-            var entity = connection.Get<T>(id);
+            var entity = _connection.Get<T>(id);
 
             if (entity == null)
             {
@@ -39,8 +37,7 @@ namespace Blog.Repositories
 
         public bool Create(T entity)
         {
-            using var connection = _connection;
-            var result = connection.Insert(entity) > 0;
+            var result = _connection.Insert(entity) > 0;
 
             if (!result)
                 throw new Exception($"Erro ao inserir a entidade:");
@@ -49,8 +46,7 @@ namespace Blog.Repositories
 
         public bool Update(T entity)
         {
-            using var connection = _connection;
-            var result = connection.Update(entity);
+            var result = _connection.Update(entity);
 
             if (!result)
                 throw new Exception("Erro ao atualizar a entidade");
@@ -59,8 +55,7 @@ namespace Blog.Repositories
 
         public bool Delete(T entity)
         {
-            using var connection = _connection;
-            var result = connection.Delete(entity);
+            var result = _connection.Delete(entity);
 
             if (!result)
                 throw new Exception("Erro ao deletar a entidade");
@@ -71,8 +66,7 @@ namespace Blog.Repositories
         {
 
             T entity = GetById(id);
-            using var connection = _connection;
-            var result = connection.Delete(entity);
+            var result = _connection.Delete(entity);
 
             if (!result)
                 throw new Exception("Erro ao deletar a entidade");
