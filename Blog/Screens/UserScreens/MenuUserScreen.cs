@@ -1,24 +1,21 @@
 ﻿using Blog.Screens.CategoryScreens;
-using Blog.Screens.ReportScreens;
-using Blog.Screens.UserScreens;
 using Blog.Utils;
 
-namespace Blog.Screens
+namespace Blog.Screens.UserScreens
 {
-    public class MenuScreen
+    public class MenuUserScreen
     {
         public static void Load()
         {
             Console.Clear();
-            Console.WriteLine("Acesso a dados com Dapper");
-            Console.WriteLine("===================================================");
-            Console.WriteLine("[0] - Encerrar aplicação");
-            Console.WriteLine("[1] - Gestão de usuários");
-            Console.WriteLine("[2] - Gestão de perfis");
-            Console.WriteLine("[3] - Gestão de categorias");
-            Console.WriteLine("[4] - Gestão de tags");
-            Console.WriteLine("[5] - Gestão de postagens");
-            Console.WriteLine("[6] - Relatórios");
+            Console.WriteLine("Gestão de usuários");
+            Console.WriteLine("=======================================================");
+            Console.WriteLine("[0] - Voltar ao Menu principal");
+            Console.WriteLine("[1] - Listar usuários");
+            Console.WriteLine("[2] - Buscar usuário pelo ID");
+            Console.WriteLine("[3] - Criar usuário");
+            Console.WriteLine("[4] - Editar usuário");
+            Console.WriteLine("[5] - Deletar usuário");
             Console.Write("\nSelecione o número correspondente a opção desejada: ");
             var input = Console.ReadLine();
 
@@ -31,21 +28,22 @@ namespace Blog.Screens
             switch (option)
             {
                 case 0:
+                    MenuScreen.Load();
                     break;
                 case 1:
-                    MenuUserScreen.Load();
+                    ReadUserScreen.Load();
                     break;
                 case 2:
+                    ReadUserScreen.Load(0);
                     break;
                 case 3:
-                    MenuCategoryScreen.Load();
+                    CreateUserScreen.Load();
                     break;
                 case 4:
+                    UpdateUserScreen.Load();
                     break;
                 case 5:
-                    break;
-                case 6:
-                    MenuReportScreen.Load();
+                    DeleteUserScreen.Load();
                     break;
                 default:
                     Load();

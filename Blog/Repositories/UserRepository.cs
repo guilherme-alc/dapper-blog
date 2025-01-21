@@ -43,5 +43,21 @@ namespace Blog.Repositories
                 throw new Exception("Não foi possível realizar a busca desse relatório");
             return users;
         }
+
+        public bool UpdateUser(int id, string name, string email, string slug)
+        {
+            var query = @"UPDATE [User]
+                                SET Name = @Name, Email = @Email, Slug = @Slug
+                                WHERE [Id] = @Id";
+            var result = _connection.Execute(query, new {
+                Id = id, 
+                Name = name, 
+                Email = email,
+                Slug = slug
+            }) > 0;
+            if (!result)
+                throw new Exception($"Erro ao atualizar o usuário:");
+            return result;
+        }
     }
 }
