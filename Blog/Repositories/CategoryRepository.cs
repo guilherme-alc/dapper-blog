@@ -49,7 +49,7 @@ namespace Blog.Repositories
             var query = @"SELECT 
                             [Category].*, [Post].* FROM [Category]
                         LEFT JOIN 
-                            [Post] ON [Category].[Id] = [Post].[Id]";
+                            [Post] ON [Category].[Id] = [Post].[CategoryId]";
             var items = _connection.Query<Category, Post, Category>(query, (category, post) =>
             {
                 var existingCategory = categories.Where(x => x.Id == category.Id).FirstOrDefault();
