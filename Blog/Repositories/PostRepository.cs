@@ -50,5 +50,18 @@ namespace Blog.Repositories
             }, splitOn: "Id");
             return posts;
         }
+
+        public bool PostTag(int postId, int tagId)
+        {
+            var query = @"INSERT INTO [PostTag] VALUES (@PostId, @TagId)";
+            var result = _connection.Execute(query, new
+            {
+                PostId = postId,
+                TagId = tagId
+            }) > 0;
+            if(!result)
+                throw new Exception($"Erro ao vincular a tag na postagem:");
+            return result;
+        }
     }
 }

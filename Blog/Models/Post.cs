@@ -2,6 +2,7 @@
 
 namespace Blog.Models
 {
+    [Table("Post")]
     public class Post
     {
         public Post()
