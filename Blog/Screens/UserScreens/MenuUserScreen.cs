@@ -16,6 +16,7 @@ namespace Blog.Screens.UserScreens
             Console.WriteLine("[3] - Criar usuário");
             Console.WriteLine("[4] - Editar usuário");
             Console.WriteLine("[5] - Deletar usuário");
+            Console.WriteLine("[6] - Vincular usuário a um perfil");
             Console.Write("\nSelecione o número correspondente a opção desejada: ");
             var input = Console.ReadLine();
 
@@ -44,6 +45,9 @@ namespace Blog.Screens.UserScreens
                     break;
                 case 5:
                     DeleteUserScreen.Load();
+                    break;
+                case 6:
+                    UserRoleScreen.Load();
                     break;
                 default:
                     Load();

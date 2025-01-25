@@ -59,5 +59,20 @@ namespace Blog.Repositories
                 throw new Exception($"Erro ao atualizar o usuário:");
             return result;
         }
+
+        public bool UserRole(int userId, int roleId)
+        {
+            var query = @"INSERT INTO [UserRole] VALUES (@UserId, @RoleId)";
+
+            var result = _connection.Execute(query, new
+            {
+                UserId = userId,
+                RoleId = roleId
+            }) > 0;
+
+            if (!result)
+                throw new Exception($"Erro ao vincular o usuário ao perfil:");
+            return result;
+        }
     }
 }
