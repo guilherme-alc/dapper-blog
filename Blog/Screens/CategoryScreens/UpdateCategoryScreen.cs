@@ -31,7 +31,7 @@ namespace Blog.Screens.CategoryScreens
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"{ex.Message}");
+                Console.WriteLine($"\n{ex.Message}");
             }
             finally
             {

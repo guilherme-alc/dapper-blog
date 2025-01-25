@@ -1,5 +1,4 @@
-﻿using Blog.Screens.CategoryScreens;
-using Blog.Utils;
+﻿using Blog.Utils;
 
 namespace Blog.Screens.UserScreens
 {

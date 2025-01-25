@@ -1,6 +1,5 @@
 ﻿using Blog.Models;
 using Blog.Repositories;
-using Blog.Screens.UserScreens;
 using Blog.Utils;
 
 namespace Blog.Screens.TagScreens
@@ -21,7 +20,7 @@ namespace Blog.Screens.TagScreens
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"{ex.Message}");
+                Console.WriteLine($"\n{ex.Message}");
             }
             finally
             {
@@ -49,7 +48,7 @@ namespace Blog.Screens.TagScreens
                 }
             }
         }
-        public static void Load(int param)
+        public static void Load(int value)
         {
             try
             {

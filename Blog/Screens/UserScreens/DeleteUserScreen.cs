@@ -1,6 +1,5 @@
 ﻿using Blog.Models;
 using Blog.Repositories;
-using Blog.Screens.CategoryScreens;
 using Blog.Utils;
 
 namespace Blog.Screens.UserScreens
@@ -23,7 +22,7 @@ namespace Blog.Screens.UserScreens
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"{ex.Message}");
+                Console.WriteLine($"\n{ex.Message}");
             }
             finally
             {

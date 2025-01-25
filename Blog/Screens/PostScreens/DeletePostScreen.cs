@@ -22,7 +22,7 @@ namespace Blog.Screens.PostScreens
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"{ex.Message}");
+                Console.WriteLine($"\n{ex.Message}");
             }
             finally
             {

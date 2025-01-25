@@ -29,10 +29,10 @@ namespace Blog.Screens.CategoryScreens
                     MenuScreen.Load();
                     break;
                 case 1:
-                    ReadCategoryScreen.Load(0);
+                    ReadCategoryScreen.Load();
                     break;
                 case 2:
-                    ReadCategoryScreen.Load();
+                    ReadCategoryScreen.Load(0);
                     break;
                 case 3: 
                     CreateCategoryScreen.Load();

@@ -6,7 +6,7 @@ namespace Blog.Screens.CategoryScreens
 {
     public class ReadCategoryScreen
     {
-        public static void Load(int value)
+        public static void Load()
         {
             try
             {
@@ -19,7 +19,7 @@ namespace Blog.Screens.CategoryScreens
                 }
             } catch (Exception ex)
             {
-                Console.WriteLine($"{ex.Message}");
+                Console.WriteLine($"\n{ex.Message}");
             }
             finally
             {
@@ -38,7 +38,7 @@ namespace Blog.Screens.CategoryScreens
                     else if (input == "1")
                     {
                         repeat = false;
-                        Load(1);
+                        Load();
                     }
                     else
                     {
@@ -48,7 +48,7 @@ namespace Blog.Screens.CategoryScreens
             }
         }
 
-        public static void Load()
+        public static void Load(int value)
         {
             try
             {
@@ -75,7 +75,7 @@ namespace Blog.Screens.CategoryScreens
                 var repeat = true;
                 while (repeat)
                 {
-                    Console.WriteLine("\n[0] - Voltar ao menu anteior");
+                    Console.WriteLine("\n[0] - Voltar ao menu anterior");
                     Console.WriteLine("[1] - Fazer uma nova busca");
                     var input = Console.ReadLine();
 
@@ -87,7 +87,7 @@ namespace Blog.Screens.CategoryScreens
                     else if (input == "1")
                     {
                         repeat = false;
-                        Load();
+                        Load(0);
                     }
                     else
                     {

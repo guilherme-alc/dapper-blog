@@ -75,7 +75,7 @@ namespace Blog.Screens.PostScreens
                 var repeat = true;
                 while (repeat)
                 {
-                    Console.WriteLine("\n[0] - Voltar ao menu anteior");
+                    Console.WriteLine("\n[0] - Voltar ao menu anterior");
                     Console.WriteLine("[1] - Fazer uma nova busca");
                     var input = Console.ReadLine();
 

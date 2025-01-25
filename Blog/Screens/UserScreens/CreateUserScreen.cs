@@ -1,6 +1,5 @@
 ﻿using Blog.Models;
 using Blog.Repositories;
-using Blog.Screens.CategoryScreens;
 
 namespace Blog.Screens.UserScreens
 {
@@ -42,14 +41,14 @@ namespace Blog.Screens.UserScreens
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"{ex.Message}");
+                Console.WriteLine($"\n{ex.Message}");
             }
             finally
             {
                 var repeat = true;
                 while (repeat)
                 {
-                    Console.WriteLine("\n[0] - Voltar ao menu anteior");
+                    Console.WriteLine("\n[0] - Voltar ao menu anterior");
                     Console.WriteLine("[1] - Criar novo usuário");
                     var input = Console.ReadLine();
 
