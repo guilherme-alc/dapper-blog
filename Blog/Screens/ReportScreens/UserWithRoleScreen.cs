@@ -12,7 +12,7 @@ namespace Blog.Screens.ReportScreens
                 var users = repository.GetUserWithRole();
                 foreach(var user in users)
                 {
-                    Console.WriteLine($"{user.Id} | {user.Name} | {user.Email} | {user.Bio}");
+                    Console.WriteLine($"\nID: {user.Id} | {user.Name} | {user.Email}\nBio:\n{user.Bio}");
                     foreach(var role in user.Roles)
                     {
                         Console.WriteLine($"- {role.Name}");

@@ -12,10 +12,10 @@ namespace Blog.Screens.ReportScreens
                 var posts = repository.GetPostWithTag();
                 foreach (var post in posts)
                 {
-                    Console.WriteLine($"Postagem: {post.Title}");
+                    Console.WriteLine($"\n{post.Id} | {post.Title}");
                     foreach(var tag in post.Tags)
                     {
-                        Console.WriteLine($"    - {tag.Name}");
+                        Console.WriteLine($"    - {tag.Id} | {tag.Name}");
                     }
                 }
             }

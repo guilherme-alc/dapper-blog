@@ -12,10 +12,11 @@ namespace Blog.Screens.ReportScreens
                 var categories = repository.GetPostFromCategory();
                 foreach (var category in categories)
                 {
-                    Console.WriteLine($"Categoria: {category.Name}");
+                    Console.WriteLine($"\nCategoria: ID: {category.Id} | {category.Name}");
                     foreach(var post in category.Posts)
                     {
-                        Console.WriteLine($"Postagem:\n      {post.Title}\n      Criado em: {post.CreateDate}\n      {post.Body}");
+                        Console.WriteLine($"Postagem:\nID: {post.Id} | {post.Title}\n{post.Body}\nCriado em: {post.CreateDate}");
+                        Console.WriteLine();
                     }
                 }
             }
