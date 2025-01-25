@@ -1,5 +1,6 @@
 ﻿using Blog.Screens.CategoryScreens;
 using Blog.Screens.ReportScreens;
+using Blog.Screens.TagScreens;
 using Blog.Screens.UserScreens;
 using Blog.Utils;
 
@@ -41,6 +42,7 @@ namespace Blog.Screens
                     MenuCategoryScreen.Load();
                     break;
                 case 4:
+                    MenuTagScreen.Load();
                     break;
                 case 5:
                     break;
